@@ -24,6 +24,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "alamat TEXT NOT NULL)";
         Log.d(TAG, "onCreate: " + sql);
         db.execSQL(sql);
+        sql = "INSERT INTO biodata(nama, tanggal, jk, alamat) VALUES " +
+                "('Karang', '1997-10-18', 'L', 'PBI')";
+        db.execSQL(sql);
     }
 
     @Override
